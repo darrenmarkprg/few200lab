@@ -1,0 +1,25 @@
+
+
+### Getting some stuff
+
+GET http://localhost:3000/songs
+Accept: application/json
+
+
+
+### Adding a Song
+
+POST http://localhost:3000/songs
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Livin in America",
+  "artist": "James Brown",
+  "album": "James Brown's Greatest Hits"
+}
+
+
+### Removing a song
+
+DELETE http://localhost:3000/songs/60dcb86d8bbe4f101c96bb58
