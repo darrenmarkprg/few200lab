@@ -19,6 +19,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './effects/app.effects';
 import { CounterEffects } from './effects/counter.effects';
 import { MusicModule } from './features/music/music.module';
+import { MediaLibraryModule } from './features/media-library/media-library.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MusicModule } from './features/music/music.module';
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([AppEffects, CounterEffects]),
     MusicModule,
-    AppRoutingModule,
+    MediaLibraryModule,
+    AppRoutingModule
   ],
   providers: [TodosDataService],
   bootstrap: [AppComponent]
