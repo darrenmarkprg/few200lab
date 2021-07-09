@@ -20,6 +20,7 @@ import { AppEffects } from './effects/app.effects';
 import { CounterEffects } from './effects/counter.effects';
 import { MusicModule } from './features/music/music.module';
 import { MediaLibraryModule } from './features/media-library/media-library.module';
+import * as mediaReducers from "../app/features/media-library/reducers";
 
 @NgModule({
   declarations: [

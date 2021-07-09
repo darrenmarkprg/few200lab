@@ -5,6 +5,10 @@ import { MediaLibraryComponent } from './components/media-library/media-library.
 import { MediaListComponent } from './components/media-list/media-list.component';
 import { MediaEntryComponent } from './components/media-entry/media-entry.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { featureName } from '../music/reducers';
+import { reducers } from './reducers';
 
 const routes: Routes = [
   {
@@ -32,7 +36,10 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    HttpClientModule
+    StoreModule.forFeature(featureName, reducers),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MediaLibraryModule { }

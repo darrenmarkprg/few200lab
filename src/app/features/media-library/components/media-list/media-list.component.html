@@ -1,1 +1,9 @@
-<p>media-list works!</p>
+<div class="card"
+     *ngFor="let media of media$ | async">
+  <div class="card-header">
+    {{media.title}}
+  </div>
+  <div class="card-body">
+    This is a test
+  </div>
+</div>
